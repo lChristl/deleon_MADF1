@@ -61,7 +61,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         ), 
         actions: [ 
           TextButton( 
-            onPressed: () => Navigator.pop(dialogContext, false), 
+            onPressed: () => Navigator.pop(dialogContext, false),
             child: const Text('Cancel'), 
           ), 
           TextButton( 
@@ -82,7 +82,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       const SnackBar(content: Text('Form has been cleared.')), 
     ); 
   } 
-  
   @override 
   Widget build(BuildContext context) { 
     return Scaffold( 
@@ -134,7 +133,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   prefixIcon: Icon(Icons.badge), 
                 ), 
                 validator: (value) { 
-                  if (value == null || value.trim().isEmpty) {
+                  if (value == null || value.trim().isEmpty) { 
                     return 'Student ID is required'; 
                   } 
                   return null; 
@@ -178,47 +177,4 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       ), 
     ); 
   } 
-}                    return 'Student ID is required'; 
-                  } 
-                  return null; 
-                }, 
-              ), 
-              const SizedBox(height: 15), 
-              TextFormField( 
-                controller: emailController, 
-                keyboardType: TextInputType.emailAddress, 
-                decoration: const InputDecoration( 
-                  labelText: 'Email Address', 
-                  border: OutlineInputBorder(), 
-                  prefixIcon: Icon(Icons.email), 
-                ), 
-                validator: (value) { 
-                  if (value == null || value.trim().isEmpty) { 
-                    return 'Email is required'; 
-                  } 
-                  final email = value.trim(); 
-                  if (!RegExp( 
-                    r'^[^@\s]+@[^@\s]+\.[^@\s]+$', 
-                  ).hasMatch(email)) { 
-                    return 'Enter a valid email'; 
-                  } 
-                  return null; 
-                }, 
-              ), 
-              const SizedBox(height: 25), 
-              ElevatedButton( 
-                onPressed: registerStudent, 
-                child: const Text('Register Student'), 
-              ), 
-              const SizedBox(height: 10), 
-              OutlinedButton( 
-                onPressed: clearForm, 
-                child: const Text('Clear Form'), 
-              ), 
-            ], 
-          ), 
-        ), 
-      ), 
-    ); 
-  } 
-}
+} 

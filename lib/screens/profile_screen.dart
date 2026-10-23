@@ -1,4 +1,3 @@
-File: lib/screens/profile_screen.dart 
 import 'package:flutter/material.dart'; 
   
 class ProfileScreen extends StatelessWidget { 
@@ -12,7 +11,7 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold( 
       appBar: AppBar( 
         title: const Text('Student Profile'), 
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.blue, 
         foregroundColor: Colors.white, 
       ), 
       body: Padding( 
